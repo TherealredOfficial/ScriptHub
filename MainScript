@@ -1,0 +1,89 @@
+-- My Script Hub (TheRealRed)
+
+-- Check if the game is Strongest Punch Simulator
+if game.PlaceId == 6875469709 then
+    -- Load OrionLib
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+    
+    -- Initialize OrionLib window
+    local Window = OrionLib:MakeWindow({
+        Name = "Mystic Hub | 👑 STRONGEST PUNCH SIMULATOR",
+        HidePremium = false,
+        IntroText = "MysticHub",
+        SaveConfig = true,
+        ConfigFolder = "OrionTest"
+    })
+
+    -- Values
+    local AutoClickEnabled = false
+    local AutoTeleportEnabled = false
+
+    -- Functions
+
+    function AutoTeleport()
+        local remote = game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent")
+
+        while AutoTeleportEnabled do
+            local args = {
+                [1] = {
+                    [1] = "WarpPlrToOtherMap",
+                    [2] = "Next"
+                }
+            }
+
+            remote:FireServer(unpack(args))
+            wait(0.7)  
+        end
+    end
+
+    function AutoClick()
+        local remote = game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent")
+        
+        while AutoClickEnabled do
+            local args = {
+                [1] = {
+                    [1] = "Activate_Punch"
+                }
+            }
+            
+            remote:FireServer(unpack(args))
+            wait(0.00000000000000000000001)
+        end
+    end
+
+    -- Create MainTab
+    local MainTab = Window:MakeTab({
+        Name = "Main",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    -- Add toggles to MainTab
+    MainTab:AddToggle({
+        Name = "AutoPunch",
+        Default = false,
+        Save = true,
+        Callback = function(newValue)
+            AutoClickEnabled = newValue
+            if newValue then
+                AutoClick()
+            end
+        end
+    })
+
+    MainTab:AddToggle({
+        Name = "Auto Teleport To Next World",
+        Default = false,
+        Save = true,
+        Callback = function(newValue)
+            AutoTeleportEnabled = newValue
+            if newValue then
+                AutoTeleport()
+            end
+        end
+    })
+
+end
+
+-- Initialize OrionLib
+OrionLib:Init()
