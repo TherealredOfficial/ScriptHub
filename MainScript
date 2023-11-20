@@ -1,25 +1,24 @@
 -- My Script Hub (TheRealRed)
-
--- Check if the game is Strongest Punch Simulator
 if game.PlaceId == 6875469709 then
-    -- Load OrionLib
+    -- Strongest Punch Simulator
     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-    
-    -- Initialize OrionLib window
-    local Window = OrionLib:MakeWindow({
-        Name = "Mystic Hub | 👑 STRONGEST PUNCH SIMULATOR",
-        HidePremium = false,
-        IntroText = "MysticHub",
-        SaveConfig = true,
-        ConfigFolder = "OrionTest"
-    })
+    local Window = OrionLib:MakeWindow({Name = "Mystic Hub | 👑 STRONGEST PUNCH SIMULATOR", HidePremium = false, IntroText = "MysticHub", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+
+OrionLib:MakeNotification({
+	Name = "MysticHub",
+	Content = "MysticHub Loaded!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+
 
     -- Values
     local AutoClickEnabled = false
     local AutoTeleportEnabled = false
 
     -- Functions
-
     function AutoTeleport()
         local remote = game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent")
 
@@ -32,33 +31,32 @@ if game.PlaceId == 6875469709 then
             }
 
             remote:FireServer(unpack(args))
-            wait(0.7)  
+            wait(0.7)
         end
     end
 
     function AutoClick()
         local remote = game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent")
-        
+
         while AutoClickEnabled do
             local args = {
                 [1] = {
                     [1] = "Activate_Punch"
                 }
             }
-            
+
             remote:FireServer(unpack(args))
             wait(0.00000000000000000000001)
         end
     end
 
-    -- Create MainTab
     local MainTab = Window:MakeTab({
         Name = "Main",
         Icon = "rbxassetid://4483345998",
         PremiumOnly = false
     })
 
-    -- Add toggles to MainTab
+    -- Use a simple toggle without OnToggleChanged
     MainTab:AddToggle({
         Name = "AutoPunch",
         Default = false,
@@ -83,7 +81,1042 @@ if game.PlaceId == 6875469709 then
         end
     })
 
+    OrionLib:Init()
+
+elseif game.PlaceId == 13127800756 then
+    -- Arm Wrestle Simulator
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+    local Window = OrionLib:MakeWindow({Name = "MysticHub | 💪ARM WRESTLE SIMULATOR", HidePremium = false, IntroText = "MysticHub",  SaveConfig = true, ConfigFolder = "OrionTest"})
+
+    -- Values
+    local AutoTrainBicepEnabled = false
+    local AutoTrainHandsEnabled = false
+    local AutoKnuckle1Enbaled = false
+    local AutoKnuckle2Enabled = false
+    local AutoKnuckle3Enabled = false
+    local AutoBeatBullyEnabled = false
+    local AutoBeatTeacherEnabled = false
+    local AutoBeatGymratEnabled = false
+    local AutoBeatMafiaBossEnabled = false
+    local AutoBeatChampionEnabled = false
+    local AutoSpamNpcEnabled = false
+    local AutoKnuckle4Enbaled = false
+    local AutoKnuckle5Enabled = false
+    local AutoKnuckle6Enabled = false
+    local AutohatchEarthEggEnabled = false
+    local AutohatchIcyEggEnabled = false
+    local AutohatchLavaEggEnabled = false
+    local AutohatchBlackHoleEggEnabled = false
+
+
+
+
+    -- Functions
+    
+    
+    function teleportToBiceps()
+    -- Insert this code into a LocalScript in Roblox Studio
+
+local player = game.Players.LocalPlayer
+
+local teleportLocation = Vector3.new(-10272.3095703125, 5.233317852020264, 24.03318214416504)
+
+-- Function to teleport the player to the specified location
+local function teleportPlayer()
+    if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
+        player.Character:SetPrimaryPartCFrame(CFrame.new(teleportLocation))
+    end
 end
 
--- Initialize OrionLib
+-- Teleport the player to the specified location when the script runs
+teleportPlayer()
+
+   end
+   
+   function teleportToHands()
+    -- Insert this code into a LocalScript in Roblox Studio
+
+local player = game.Players.LocalPlayer
+
+local teleportLocation = Vector3.new(-10301.82421875, 3.821556329727173, 24.765974044799805)
+
+-- Function to teleport the player to the specified location
+local function teleportPlayer()
+    if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
+        player.Character:SetPrimaryPartCFrame(CFrame.new(teleportLocation))
+    end
+end
+
+-- Teleport the player to the specified location when the script runs
+teleportPlayer()
+
+   end
+    
+    function HatchEarthEgg()
+    -- Function to fire the purchaseEgg remote
+local function purchaseEarthEgg()
+    local args = {
+        [1] = "Earth",
+        [2] = {},
+        [4] = false
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args))
+end
+
+-- Infinite loop with a delay (adjust the delay as needed)
+while AutohatchEarthEggEnabled do
+    purchaseEarthEgg()
+    wait(0.5)  -- Adjust the wait time as needed
+end
+
+    end
+    
+    function HatchIcyEgg()
+    -- Function to fire the purchaseEgg remote for the Icy egg
+local function purchaseIcyEgg()
+    local args = {
+        [1] = "Icy",
+        [2] = {},
+        [4] = false
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args))
+end
+
+-- Infinite loop with a delay (adjust the delay as needed)
+while AutohatchIcyEggEnabled do
+    purchaseIcyEgg()
+    wait(0.5)  -- Adjust the wait time as needed
+end
+
+    end
+    
+    function HatchLavaEgg()
+    -- Function to fire the purchaseEgg remote for the Lava egg
+local function purchaseLavaEgg()
+    local args = {
+        [1] = "Lava",
+        [2] = {},
+        [4] = false
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args))
+end
+
+-- Infinite loop with a delay (adjust the delay as needed)
+while AutohatchLavaEggEnabled do
+    purchaseLavaEgg()
+    wait(0.5)  -- Adjust the wait time as needed
+end
+
+    end
+    
+    function HatchBlackHoleEgg()
+    -- Function to fire the purchaseEgg remote for the Blackhole egg
+local function purchaseBlackholeEgg()
+    local args = {
+        [1] = "Blackhole",
+        [2] = {},
+        [4] = false
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args))
+end
+
+-- Infinite loop with a delay (adjust the delay as needed)
+while AutohatchEarthEggEnabled do
+    purchaseBlackholeEgg()
+    wait(0.5)  -- Adjust the wait time as needed
+end
+
+    end
+    
+    function AutoHitNpc()
+    local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local ArmWrestleService = ReplicatedStorage:WaitForChild("Packages")
+    :WaitForChild("Knit")
+    :WaitForChild("Services")
+    :WaitForChild("ArmWrestleService")
+local RemoteEvent = ArmWrestleService:WaitForChild("RE")
+local onClickRequest = RemoteEvent:WaitForChild("onClickRequest")
+
+-- Function to fire the remote
+local function fireRemote()
+    onClickRequest:FireServer()
+end
+
+-- Infinite loop with a 1-second delay
+while AutoSpamNpcEnabled do
+    fireRemote()
+    wait(0.0000000000001)  -- Adjust the wait time as needed
+end
+
+end
+    function TeleportToBully()
+    -- Function to fire the remote
+local function enterNPCTable()
+    local args = {
+        [1] = "Bully",
+        [2] = workspace:WaitForChild("Zones"):WaitForChild("1"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Bully"):WaitForChild("Table"),
+        [3] = "1"
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer(unpack(args))
+end
+
+-- Infinite loop with a delay (adjust the delay as needed)
+while AutoBeatBullyEnabled do
+    enterNPCTable()
+    wait(1)  -- Adjust the wait time as needed
+end
+
+    end
+    function TeleportToTeacher()
+    -- Function to fire the remote
+local function enterNPCTable()
+    local args = {
+        [1] = "Teacher",
+        [2] = workspace:WaitForChild("Zones"):WaitForChild("1"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Teacher"):WaitForChild("Table"),
+        [3] = "1"
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer(unpack(args))
+end
+
+-- Infinite loop with a delay (adjust the delay as needed)
+while AutoBeatTeacherEnabled do
+    enterNPCTable()
+    wait(1)  -- Adjust the wait time as needed
+end
+
+    end
+    
+    function TeleportToGymRat()
+    -- Function to fire the second remote
+local function enterGymRatTable()
+    local args = {
+        [1] = "GymRat",
+        [2] = workspace:WaitForChild("Zones"):WaitForChild("1"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("GymRat"):WaitForChild("Table"),
+        [3] = "1"
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer(unpack(args))
+end
+
+-- Infinite loop with a delay (adjust the delay as needed)
+while AutoBeatGymratEnabled do
+    enterGymRatTable()
+    wait(1)  -- Adjust the wait time as needed
+end
+
+    end
+    
+    function TeleportToMafiaBoss()
+    -- Function to fire the third remote
+local function enterMafiaBossTable()
+    local args = {
+        [1] = "MafiaBoss",
+        [2] = workspace:WaitForChild("Zones"):WaitForChild("1"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("MafiaBoss"):WaitForChild("Table"),
+        [3] = "1"
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer(unpack(args))
+end
+
+-- Infinite loop with a delay (adjust the delay as needed)
+while AutoBeatMafiaBossEnabled do
+    enterMafiaBossTable()
+    wait(1)  -- Adjust the wait time as needed
+end
+
+    end
+    
+    function TeleportToChampion()
+    -- Function to fire the fourth remote
+local function enterChampionTable()
+    local args = {
+        [1] = "Champion",
+        [2] = workspace:WaitForChild("Zones"):WaitForChild("1"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Champion"):WaitForChild("Table"),
+        [3] = "1"
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer(unpack(args))
+end
+
+-- Infinite loop with a delay (adjust the delay as needed)
+while AutoBeatChampionEnabled do
+    enterChampionTable()
+    wait(1)  -- Adjust the wait time as needed
+end
+
+    end
+    
+    function TeleportToKnuckle1()
+    -- Insert this code into a LocalScript in Roblox Studio
+
+local player = game.Players.LocalPlayer
+
+local teleportLocation = Vector3.new(-10227.0244140625, 5.233317852020264, 116.80359649658203)
+
+-- Function to teleport the player to the specified location
+local function teleportPlayer()
+    if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
+        player.Character:SetPrimaryPartCFrame(CFrame.new(teleportLocation))
+    end
+end
+
+-- Teleport the player to the specified location when the script runs
+teleportPlayer()
+
+    end
+    
+    function TeleportToKnuckle2()
+    -- Insert this code into a LocalScript in Roblox Studio
+
+local player = game.Players.LocalPlayer
+
+local teleportLocation = Vector3.new(-10227.8154296875, 5.233318328857422, 130.010009765625)
+
+-- Function to teleport the player to the specified location
+local function teleportPlayer()
+    if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
+        player.Character:SetPrimaryPartCFrame(CFrame.new(teleportLocation))
+    end
+end
+
+-- Teleport the player to the specified location when the script runs
+teleportPlayer()
+
+    end
+    
+    function TeleportToKnuckle3()
+    -- Insert this code into a LocalScript in Roblox Studio
+
+local player = game.Players.LocalPlayer
+
+local teleportLocation = Vector3.new(-10234.2685546875, 5.233319282531738, 129.90159606933594)
+
+-- Function to teleport the player to the specified location
+local function teleportPlayer()
+    if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
+        player.Character:SetPrimaryPartCFrame(CFrame.new(teleportLocation))
+    end
+end
+
+-- Teleport the player to the specified location when the script runs
+teleportPlayer()
+
+    end
+    
+      function TeleportToKnuckle4()
+    -- Insert this code into a LocalScript in Roblox Studio
+
+local player = game.Players.LocalPlayer
+
+local teleportLocation = Vector3.new(-10235.728515625, 5.233317852020264, 129.0272674560547)
+
+-- Function to teleport the player to the specified location
+local function teleportPlayer()
+    if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
+        player.Character:SetPrimaryPartCFrame(CFrame.new(teleportLocation))
+    end
+end
+
+-- Teleport the player to the specified location when the script runs
+teleportPlayer()
+
+    end
+  
+    function TeleportToKnuckle5()
+    -- Insert this code into a LocalScript in Roblox Studio
+
+local player = game.Players.LocalPlayer
+
+local teleportLocation = Vector3.new(-10245.7861328125, 5.233317852020264, 130.00904846191406        )
+
+-- Function to teleport the player to the specified location
+local function teleportPlayer()
+    if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
+        player.Character:SetPrimaryPartCFrame(CFrame.new(teleportLocation))
+    end
+end
+
+-- Teleport the player to the specified location when the script runs
+teleportPlayer()
+
+    end
+ 
+   function TeleportToKnuckle6()
+    -- Insert this code into a LocalScript in Roblox Studio
+
+local player = game.Players.LocalPlayer
+
+local teleportLocation = Vector3.new(-10254.6884765625, 5.233317852020264, 130.2142791748047)
+
+-- Function to teleport the player to the specified location
+local function teleportPlayer()
+    if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
+        player.Character:SetPrimaryPartCFrame(CFrame.new(teleportLocation))
+    end
+end
+
+-- Teleport the player to the specified location when the script runs
+teleportPlayer()
+
+    end
+ 
+    
+    function FarmKnuckle1()
+    local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local PunchBagService = ReplicatedStorage.Packages.Knit.Services.PunchBagService
+
+local args = {"1", "Tier1"}
+
+-- Function to repeatedly call the remote
+local function loopRemoteCall()
+    while AutoKnuckle1Enbaled do
+        PunchBagService.RE.onGiveStats:FireServer(unpack(args))
+        wait(0.1)  -- Adjust the wait time between each remote call as needed
+    end
+end
+
+-- Start the loop when the script runs
+loopRemoteCall()
+
+    end
+    
+    function FarmKnuckle2()
+    local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local PunchBagService = ReplicatedStorage.Packages.Knit.Services.PunchBagService
+
+local args = {"1", "Tier2"}
+
+-- Function to repeatedly call the remote
+local function loopRemoteCall()
+    while AutoKnuckle2Enabled do
+        PunchBagService.RE.onGiveStats:FireServer(unpack(args))
+        wait(0.1)  -- Adjust the wait time between each remote call as needed
+    end
+end
+
+-- Start the loop when the script runs
+loopRemoteCall()
+        
+    end
+    
+    function FarmKnuckle3()
+    local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local PunchBagService = ReplicatedStorage.Packages.Knit.Services.PunchBagService
+
+local args = {"1", "Tier3"}
+
+-- Function to repeatedly call the remote
+local function loopRemoteCall()
+    while AutoKnuckle3Enabled do
+        PunchBagService.RE.onGiveStats:FireServer(unpack(args))
+        wait(0.1)  -- Adjust the wait time between each remote call as needed
+    end
+end
+
+-- Start the loop when the script runs
+loopRemoteCall()
+
+    end
+
+function FarmKnuckle4()
+    local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local PunchBagService = ReplicatedStorage.Packages.Knit.Services.PunchBagService
+
+local args = {"1", "Tier4"}
+
+-- Function to repeatedly call the remote
+local function loopRemoteCall()
+    while AutoKnuckle4Enabled do
+        PunchBagService.RE.onGiveStats:FireServer(unpack(args))
+        wait(0.1)  -- Adjust the wait time between each remote call as needed
+    end
+end
+
+-- Start the loop when the script runs
+loopRemoteCall()
+
+    end
+        
+function FarmKnuckle5()
+    local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local PunchBagService = ReplicatedStorage.Packages.Knit.Services.PunchBagService
+
+local args = {"1", "Tier5"}
+
+-- Function to repeatedly call the remote
+local function loopRemoteCall()
+    while AutoKnuckle5Enabled do
+        PunchBagService.RE.onGiveStats:FireServer(unpack(args))
+        wait(0.1)  -- Adjust the wait time between each remote call as needed
+    end
+end
+
+-- Start the loop when the script runs
+loopRemoteCall()
+
+    end
+
+function FarmKnuckle6()
+    local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local PunchBagService = ReplicatedStorage.Packages.Knit.Services.PunchBagService
+
+local args = {"1", "Tier6"}
+
+-- Function to repeatedly call the remote
+local function loopRemoteCall()
+    while AutoKnuckle6Enabled do
+        PunchBagService.RE.onGiveStats:FireServer(unpack(args))
+        wait(0.1)  -- Adjust the wait time between each remote call as needed
+    end
+end
+
+-- Start the loop when the script runs
+loopRemoteCall()
+
+    end
+            
+    
+    function AutoBicep()
+        local onClick = game:GetService("ReplicatedStorage"):WaitForChild("Packages").Knit.Services.ToolService.RE.onClick
+
+        while AutoTrainBicepEnabled do
+            pcall(onClick.FireServer, onClick)
+            wait(0.000000001)
+        end
+    end
+   
+
+    function AutoHands()
+        local onClick = game:GetService("ReplicatedStorage"):WaitForChild("Packages").Knit.Services.ToolService.RE.onClick
+
+        while AutoTrainHandsEnabled do
+            pcall(onClick.FireServer, onClick)
+            wait(0.00000001)
+        end
+    end
+    
+    
+--tabs
+    local FarmTab = Window:MakeTab({
+        Name = "AutoFarm",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+
+
+
+local KnucklesTab= Window:MakeTab({
+	Name = "AutoKnuckles",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local NpcTab = Window:MakeTab({
+	Name = "Auto Wins",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local PetTab = Window:MakeTab({
+	Name = "Pets",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+
+
+--section
+
+local PetSection = PetTab:AddSection({
+	Name = "AutoHatching"
+})
+
+
+    local FarmSection = FarmTab:AddSection({
+        Name = "AutoFarming"
+    })
+
+
+    OrionLib:MakeNotification({
+        Name = "Loaded!",
+        Content = "MysticHub Loaded!",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+    })
+
+--toggles
+
+PetTab:AddToggle({
+	Name = "AutoHatch Earth Egg",
+	Default = false,
+	Callback = function(newValue)
+         AutohatchEarthEggEnabled = newValue
+            if newValue then
+                HatchEarthEgg()
+            end
+        end
+    })
+
+PetTab:AddToggle({
+	Name = "AutoHatch Icy Egg",
+	Default = false,
+	Callback = function(newValue)
+         AutohatchIcyEggEnabled = newValue
+            if newValue then
+                HatchIcyEgg()
+            end
+        end
+    })
+
+PetTab:AddToggle({
+	Name = "AutoHatch Lava Egg",
+	Default = false,
+	Callback = function(newValue)
+         AutohatchLavaEggEnabled = newValue
+            if newValue then
+                HatchLavaEgg()        
+            end
+        end
+    })
+
+PetTab:AddToggle({
+	Name = "AutoHatch BlackHole Egg",
+	Default = false,
+	Callback = function(newValue)
+         AutohatchBlackHoleEggEnabled = newValue
+            if newValue then
+                HatchBlackHoleEgg()
+            end
+        end
+    })
+
+
+local Section = NpcTab:AddSection({
+	Name = "Auto Hit Npcs (Must Enable)"
+})
+
+NpcTab:AddToggle({
+        Name = "Auto Hit Npc (Must Use For Farming!)",
+        Default = false,
+        Save = true,
+        Callback = function(newValue)
+            AutoSpamNpcEnabled = newValue
+            if newValue then
+                AutoHitNpc()
+            end
+        end
+    })
+
+
+local Section = NpcTab:AddSection({
+	Name = "Farm Npcs"
+})
+
+
+NpcTab:AddToggle({
+	Name = "Auto Beat Bully",
+	Default = false,
+	  Callback = function(newValue)
+            AutoBeatBullyEnabled = newValue
+            if newValue then
+                TeleportToBully()
+                AutoHitNpc()
+                AutoSpamNpcEnabled = true
+            end
+        end
+    })
+
+	
+NpcTab:AddToggle({
+	Name = "Auto Beat Teacher",
+	Default = false,
+	  Callback = function(newValue)
+            AutoBeatTeacherEnabled = newValue
+            if newValue then
+                TeleportToTeacher()
+                AutoHitNpc()
+                AutoSpamNpcEnabled = true
+            end
+        end
+    })
+
+NpcTab:AddToggle({
+	Name = "Auto Beat GymRat",
+	Default = false,
+	  Callback = function(newValue)
+            AutoBeatGymratEnabled = newValue
+            if newValue then
+                TeleportToGymRat()
+                AutoHitNpc()
+                AutoSpamNpcEnabled = true
+            end
+        end
+    })
+
+
+NpcTab:AddToggle({
+	Name = "Auto Beat MafiaBoss",
+	Default = false,
+	  Callback = function(newValue)
+            AutoBeatMafiaBossEnabled = newValue
+            if newValue then
+                TeleportToMafiaBoss()
+                AutoHitNpc()
+                AutoSpamNpcEnabled = true        
+            end
+        end
+    })
+
+
+NpcTab:AddToggle({
+	Name = "Auto Beat Champion",
+	Default = false,
+	  Callback = function(newValue)
+            AutoBeatChampionEnabled = newValue
+            if newValue then
+                TeleportToChampion()
+                AutoHitNpc()
+                AutoSpamNpcEnabled = true
+            end
+        end
+    })
+
+
+
+
+    FarmTab:AddToggle({
+        Name = "AutoFarm Biceps",
+        Default = false,
+        Save = true,
+        Callback = function(newValue)
+            AutoTrainBicepEnabled = newValue
+            if newValue then
+            teleportToBiceps()
+                AutoBicep()
+            end
+        end
+    })
+
+
+    FarmTab:AddToggle({
+        Name = "AutoFarm Hands",
+        Default = false,
+        Save = true,
+        Callback = function(newValue)
+            AutoTrainHandsEnabled = newValue
+            if newValue then
+            teleportToHands()
+                AutoHands()
+            end
+        end
+    })
+    
+    
+local Section = KnucklesTab:AddSection({
+	Name = "World 1"
+})
+
+    
+  KnucklesTab:AddToggle({
+        Name = "1 Knuckle Farm (0 Required)",
+        Default = false,
+        Save = true,
+        Callback = function(newValue)
+            AutoKnuckle1Enbaled = newValue
+            if newValue then
+                TeleportToKnuckle1()
+                FarmKnuckle1()
+            end
+        end
+    })
+
+KnucklesTab:AddToggle({
+        Name = "2 Knuckle Farm (400 Required)",
+        Default = false,
+        Save = true,
+        Callback = function(newValue)
+            AutoKnuckle2Enabled = newValue
+            if newValue then
+                TeleportToKnuckle2()
+                FarmKnuckle2()
+            end
+        end
+    })
+
+
+KnucklesTab:AddToggle({
+        Name = "3 Knuckle Farm",
+        Default = false,
+        Save = true,
+        Callback = function(newValue)
+            AutoKnuckle3Enabled = newValue
+            if newValue then
+                TeleportToKnuckle3()
+                FarmKnuckle3()
+            end
+        end
+    })
+
+KnucklesTab:AddToggle({
+        Name = "4 Knuckle Farm",
+        Default = false,
+        Save = true,
+        Callback = function(newValue)
+            AutoKnuckle4Enabled = newValue
+            if newValue then
+                TeleportToKnuckle4()
+                FarmKnuckle4()
+            end
+        end
+    })
+
+
+KnucklesTab:AddToggle({
+        Name = "5 Knuckle Farm",
+        Default = false,
+        Save = true,
+        Callback = function(newValue)
+            AutoKnuckle5Enabled = newValue
+            if newValue then
+                TeleportToKnuckle5()
+                FarmKnuckle5()
+            end
+        end
+    })
+
+KnucklesTab:AddToggle({
+        Name = "6 Knuckle Farm",
+        Default = false,
+        Save = true,
+        Callback = function(newValue)
+            AutoKnuckle6Enabled = newValue
+            if newValue then
+                TeleportToKnuckle6()
+                FarmKnuckle6()
+            end
+        end
+    })
+
+    OrionLib:Init()
+    
+    elseif game.PlaceId == 662417684 then
+    
+    --LuckyBlock BattleGrounds
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "MysticHub | ❓ LUCKY BLOCKS Battlegrounds", HidePremium = false, IntroText = "MysticHub", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local MainTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local MainSection = MainTab:AddSection({
+	Name = "The Main stuff"
+})
+
+OrionLib:MakeNotification({
+	Name = "MysticHub",
+	Content = "MysticHub Loaded!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+MainTab:AddButton({
+    Name = "Get 10 Weapons",
+    Callback = function()
+        for i = 1, 5 do
+            game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()
+        end
+    end
+})
+
+
+
+MainTab:AddButton({
+    Name = "Get 25 Weapons",
+    Callback = function()
+        for i = 1, 12 do
+            game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()
+        end
+    end
+})
+
+
+MainTab:AddButton({
+	Name = "Get 50 Weapons",
+	Callback = function()
+	for i = 1, 25 do
+    game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()
+end
+
+  	end    
+})
+
+local MainSection = MainTab:AddSection({
+	Name = "Player Stuff"
+})
+
+local player = game.Players.LocalPlayer
+
+local slider = Instance.new("Slider")
+slider.Name = "SpeedSlider"
+slider.Parent = player.PlayerGui -- Change this to a suitable parent if needed
+slider.Position = UDim2.new(0, 10, 0, 10)
+slider.Size = UDim2.new(0, 200, 0, 20)
+slider.MinValue = 16
+slider.MaxValue = 100
+slider.Value = 16
+
+slider.MouseButton1Up:Connect(function()
+    local speed = slider.Value
+    player.Character:FindFirstChildOfClass("Humanoid").WalkSpeed = speed
+end)
+
 OrionLib:Init()
+
+
+--SkyWars By voxel
+elseif game.PlaceId == 8542259458 then
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "MysticHub | SkyWars 🔥", HidePremium = false, IntroText = "MysticHub", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+--Values
+
+local AutoWinEnabled = false
+
+--Functions
+
+function AutowinMain()
+local player = game.Players.LocalPlayer
+local Workspace = game:GetService("Workspace")
+local RunService = game:GetService("RunService")
+local TweenService = game:GetService("TweenService")
+
+function findClosestPlayer()
+    local minDistance = math.huge
+    local closestPlayer
+
+    for _, otherPlayer in pairs(game.Players:GetPlayers()) do
+        if otherPlayer ~= player and otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") then
+            local distance = (otherPlayer.Character.HumanoidRootPart.Position - player.Character.HumanoidRootPart.Position).Magnitude
+            if distance < minDistance then
+                minDistance = distance
+                closestPlayer = otherPlayer
+            end
+        end
+    end
+
+    return closestPlayer
+end
+
+function teleportToPosition(targetPosition)
+    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(targetPosition)
+    end
+end
+
+function teleportToRandomPlayer()
+    local players = game.Players:GetPlayers()
+    local randomPlayer = players[math.random(1, #players)]
+
+    if randomPlayer ~= player and randomPlayer.Character and randomPlayer.Character:FindFirstChild("HumanoidRootPart") then
+        local targetPosition = randomPlayer.Character.HumanoidRootPart.Position
+        teleportToPosition(targetPosition)
+    end
+end
+
+function isPlayerFalling(targetPlayer)
+    if targetPlayer and targetPlayer.Character and targetPlayer.Character:FindFirstChild("Humanoid") then
+        local humanoid = targetPlayer.Character.Humanoid
+        return humanoid:GetState() == Enum.HumanoidStateType.Freefall
+    end
+    return false
+end
+
+-- Camera module to follow the player's character's head
+local function setupCamera()
+    local camera = Workspace.CurrentCamera
+
+    RunService.RenderStepped:Connect(function()
+        if player.Character then
+            local closestPlayer = findClosestPlayer()
+
+            if closestPlayer and closestPlayer.Character and closestPlayer.Character:FindFirstChild("Head") then
+                -- Check if the closest player is alive
+                if closestPlayer.Character:FindFirstChild("Humanoid") and closestPlayer.Character.Humanoid.Health > 0 then
+                    local targetPosition = closestPlayer.Character.Head.Position
+
+                    if isPlayerFalling(closestPlayer) then
+                        
+                        teleportToRandomPlayer()
+                    else
+                        teleportToPosition(targetPosition)
+                        camera.CFrame = CFrame.new(targetPosition - closestPlayer.Character.HumanoidRootPart.CFrame.LookVector * 10 + Vector3.new(0, 5, 0), targetPosition)
+                    end
+                end
+            end
+        end
+    end)
+end
+
+
+setupCamera()
+
+while wait(1.5) do
+    teleportToRandomPlayer()
+end
+
+end
+
+--Tab
+local AutowinTab = Window:MakeTab({
+	Name = "AutoWin",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+--Section
+local Section = AutowinTab:AddSection({
+	Name = "AutoWin ( Solo, must have sword )"
+})
+
+
+--Notification
+OrionLib:MakeNotification({
+	Name = "MysticHub",
+	Content = "MysticHub Loaded!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+
+
+--Toggle
+AutowinTab:AddToggle({
+	Name = "Auto Wen (Solo, Must Have Sword)",
+	Default = false,
+	Callback = function(newValue)
+         AutoWinEnabled = newValue
+            if newValue then
+                AutowinMain()
+            end
+        end
+    })
+
+
+OrionLib:Init()
+end
